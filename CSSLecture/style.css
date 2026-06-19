@@ -1,9 +1,9 @@
 /* Unicversal Selector */
-*{
+/* *{
 
 /* color: red; */
 
-}
+
 
 /* tag selector  */
 h1{
@@ -71,3 +71,182 @@ a:visited{
     font-size: 20px;
     letter-spacing: 10px;
 }
+
+/* Broder */
+
+.borderone{
+     border: 10px double red;
+} 
+
+.bordertwo{
+    border-top: 10px dotted green;
+    border-left: 5px yellow;
+    border-bottom: 10px black;
+}
+
+/* border width */
+.borderthree{
+    border-style:solid;
+
+    border-width: 10px;
+    /* Top/Right/Bottom/Left */
+
+    border-width: 10px 15px;
+    /* Top,Bottom/Left,Right; */
+
+    border-width: 10px 5px 15px 20px;
+    /* Top/Right/Bottom/Left */
+
+}
+
+/* borderstyle */
+.borderfour{
+    border-style: dashed dotted double solid;
+    border-width: 10px;
+    border-color: red green yellow black;
+}
+
+
+/* float */
+
+.Floatright{
+    width: 50%;
+    float: right ;
+}
+.clear{
+    clear: both;
+}
+.Floatleft {
+    width: 50%;
+    float: left;
+}
+
+/* flex  */
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* align-content: center; */
+    height: 100px;
+    background-color: red;
+}
+
+/* grid  */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: auto auto auto;  */
+    color: white;
+    grid-gap: 10px;
+}
+
+.grid_child,.grid div{
+    padding: 10px;
+    text-align: center;
+}
+
+.row_add{
+    
+    grid-row-start: 1;
+    grid-row-end:3 ;
+}
+
+.col_add{
+    
+   grid-column-start: 2;
+   grid-column-end: 4;
+}
+
+.media {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+
+.media img{
+    width: 100%;
+}
+
+@media screen and (max-width:900px){
+    .media{
+        grid-template-columns: repeat(4,1fr)
+    }
+}
+
+@media screen and (max-width:700px){
+    .media{
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+
+@media screen and (max-width:500px){
+    .media{
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+
+/* position relative  */
+
+.position_relative{
+    border: 2px solid red;
+    width: 1000px;
+    height: 500px;
+}
+
+.position_relative_child{
+    border: 2px solid gray;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    /* top button left right  */
+    top: 50px;
+    left: 100px;
+
+}
+
+/* position_absolute  */
+
+.position_absolute{
+    border: 2px solid red;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.position_absolute_child{
+    border: 2px solid gray;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    /* top button left right  */
+    top: 50px;
+    right: 50px;
+
+}
+
+.fixed{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+
+.online_fonts {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: large;
+  
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+
+.offline_fonts{
+    font-family: "roboto";
+}
+
+
+
