@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        let student_list=["Aung Aung","Mg Mg","Zaw Zaw","Soe Soe"]
+        console.log(student_list)
+        console.log(student_list.length)
+        console.log(student_list[0])
+
+        // array push 
+        student_list.push("Min Min")
+        console.log(student_list)
+
+        // array pop
+        student_list.pop()
+        console.log(student_list)
+
+        //unshift
+        student_list.unshift("Tun Tun")
+        console.log(student_list)
+
+        // shtft 
+        student_list.shift()
+        console.log(student_list)
+
+        // sort 
+        student_list.sort()
+        console.log(student_list)
+
+        // reverse 
+        student_list.reverse()
+        console.log(student_list)
+
+        // Array.toString 
+        console.log(student_list.toString())
+
+        // String.array 
+        let student_list2="Soe Soe,MIn MIn,Kyaw Kyaw"
+        console.log(student_list2.split(","))
+
+        let num=[1,2,3]
+        let num1=[4,5,6]
+        let num2=[7,8,9]
+
+        let result=num.concat(num1,num2)
+        console.log(result)
+
+        let result2=[...num, ...num1,...num2]
+        console.log(result2)
+    </script>
+</body>
+</html>
