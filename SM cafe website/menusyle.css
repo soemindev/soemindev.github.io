@@ -1,0 +1,148 @@
+/* Menu Section Styling */
+.menu_section {
+    padding: 80px 10%;
+    background-color: #fffdf9; /* Light cream background */
+    font-family: Arial, sans-serif;
+}
+
+.menu_container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.menu_main_title {
+    font-size: 44px;
+    color: #2b2622;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.menu_title_line {
+    width: 60px;
+    height: 4px;
+    background-color: #be9063;
+    border: none;
+    margin: 0 auto 15px auto;
+}
+
+.menu_subtitle {
+    font-size: 18px;
+    color: #73675c;
+    margin-bottom: 40px;
+}
+
+/* Category Tabs (Flexbox အသုံးပြုထားသည်) */
+.menu_tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.menu_grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+/* Individual Card Design */
+.menu_item_card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s , box-shadow 0.3s ;
+}
+
+.menu_item_card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Image Wrapper with Tags */
+.menu_img_box {
+    /* position: relative; */
+    height: 220px;
+    overflow: hidden;
+}
+
+.menu_item_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ;
+}
+
+.menu_item_card:hover .menu_item_img {
+    transform: scale(1.1); /* Hover လုပ်ရင် ပုံလေး နည်းနည်း ကြီးလာမယ့် Effect */
+}
+
+.menu_tag, .menu_tag_ice {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    color: white;
+}
+.menu_tag { background-color: #e07a5f; }
+.menu_tag_ice { background-color: #4ea8de; }
+
+/* Item Info Area */
+.menu_item_info {
+    padding: 20px;
+    text-align: left;
+}
+
+.menu_item_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu_item_header h3 {
+    font-size: 1.25rem;
+    color: #2b2622;
+}
+
+.menu_price {
+    font-weight: bold;
+    color: #be9063;
+    font-size: 1.1rem;
+}
+
+.menu_desc {
+    font-size: 0.9rem;
+    color: #7f746b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    height: 45px; 
+    overflow: hidden;
+}
+
+/* Order Button */
+.add_to_cart_btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2b2622;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.add_to_cart_btn:hover {
+    background-color: #be9063;
+}
+

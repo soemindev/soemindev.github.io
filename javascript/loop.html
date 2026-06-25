@@ -9,6 +9,7 @@
     <h1>Looping</h1>
 
     <script>
+
         // for loop ()
         for(let i=0;i<50;i++){
             document.write("<h1>Hello world "+(i+1) +"</h1>")
@@ -22,6 +23,41 @@
             document.write("<h1>Hello world "+(laptop_list[i]) +"</h1>")
 
         }
+
+        for(let i=0;i<3;i++){
+            for(let k=0;k<=i;k++){
+                document.write("*")
+
+            }
+            document.write("<br>")
+        }
+
+        for(let i=5;i>=0;i--){
+            for(let k=0;k<=i;k++){
+                document.write("*")
+
+            }
+            document.write("<br>")
+        }
+
+        // while loop 
+        let number=parseInt(prompt("enter a number"))
+        while(number<100){
+
+            document.write("Your number is while loop"+number+"<br>")
+
+            number+=10;
+
+        }
+
+        // do{
+
+        //     document.write("Your number is do while loop"+number+"<br>")
+
+        // }while(number+=20)
+
+
+
     </script>
 </body>
 </html>

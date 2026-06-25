@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Work</title>
 </head>
+
 <body>
     <script>
-        let num=prompt("enter number")
+        // let num=prompt("enter number")
+        // for(i=1;i<=12;i++){
+        //     document.write("<h1>" +num+"*"+i+ "="+(num*i)+ " </h1>")
+        //  }
 
-        for(i=1;i<=12;i++){
-            document.write("<h1>" +num+"*"+i+ "="+(num*i)+ " </h1>")
+        let secret_num = 27;
+        let count = 0;
+
+        // if(num==scart_num){
+        //     document.write("Congratulations!")
+        // }
+        // else()
+
+        while (true) {
+            let Guess_number=prompt("enter Guess number")
+            count++
+
+            if (Guess_number> secret_num) {
+                prompt("Your number is greter than")
+
+
+            }
+            else if (Guess_number < secret_num) {
+                prompt("Your number is less than")
+
+            }
+            else {
+                break;
+            }
+            
+            document.write("Congratulations")
+            document.write("<br>"+"count"+count)
+            
 
         }
+        // document.write(count)
+        // document.write("Congratulations!")
+
     </script>
 </body>
+
 </html>
