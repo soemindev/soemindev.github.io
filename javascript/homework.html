@@ -9,11 +9,15 @@
 
 <body>
     <script>
-        // let num=prompt("enter number")
-        // for(i=1;i<=12;i++){
-        //     document.write("<h1>" +num+"*"+i+ "="+(num*i)+ " </h1>")
-        //  }
+        for(let i=5;i>=0;i--){
+            for(let k=0;k<=i;k++){
+                document.write("*")
 
+            }
+            document.write("<br>")
+        }
+
+    
         let secret_num = 27;
         let count = 0;
 
@@ -40,12 +44,11 @@
             }
             
             document.write("Congratulations")
-            document.write("<br>"+"count"+count)
+            document.write("<br>"+"count= "+count)
             
 
         }
-        // document.write(count)
-        // document.write("Congratulations!")
+        
 
     </script>
 </body>
