@@ -88,6 +88,12 @@
     height: 100vh;
 }
 
+.menu_banner {
+    background-image: url(../Images/Gemini_Generated_Image_qfcwmwqfcwmwqfcw.png);
+    background-size: cover;
+    height: 110vh;
+}
+
 .banner_content {
     width: 80%;
     margin: auto;
@@ -246,10 +252,38 @@
 /* end categories  */
 
 /* start most popular*/
+.menu_main {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main_hr {
+    margin: auto;
+    width: 10%;
+    height: 3px;
+    background-color: #be9063;
+    margin-top: 5px;
+
+}
+
+.menu_main p {
+    p {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        width: 600px;
+        margin: 10px auto 30px;
+        font-weight: 300;
+    }
+
+}
+
 .menu_section {
     width: 80%;
     margin: auto;
     margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: #fffdf9;
 }
 
 .menu_container {
@@ -296,7 +330,7 @@
     transition: transform 0.5s;
 }
 
-.menu_item_card:hover .menu_item_img {
+.menu_card:hover .menu_item_img {
     transform: scale(1.1);
 }
 
@@ -331,22 +365,23 @@
 
 .menu_desc {
     font-size: 15px;
+    font-style: italic;
     color: #7f746b;
     line-height: 1;
     margin-bottom: 20px;
-    height: 45px;
+    height: 55px;
     overflow: hidden;
 }
 
 .milkshake_item {
     font-size: 18px;
     color: #7f746b;
-    line-height: 1; 
+    line-height: 1;
     margin-bottom: 20px;
     padding-left: 20px;
     height: 83px;
     overflow: hidden;
-    
+
 }
 
 

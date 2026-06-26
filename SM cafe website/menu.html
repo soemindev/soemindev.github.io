@@ -15,21 +15,21 @@
     <!-- start nav  -->
 
     <head>
-        <div class="nav_img">
-            <nav class="navbar">
-                <div>
-                    <a href=""><img src="Images/cafe (1).svg" alt="" class="logo">
-                </div>
-                <ul>
 
-                    <Li><a href="index.html" class="navbar_item">Home</a></Li>
-                    <Li><a href="menu.html" class="navbar_item">Menu</a></Li>
-                    <Li><a href="" class="navbar_item">About</a></Li>
-                    <Li><a href="" class="navbar_item">Contact</a></Li>
-                    <Li><a href="" class="nav_login">Log in</a></Li>
-                </ul>
+        <nav class="navbar">
+            <div>
+                <a href=""><img src="Images/cafe (1).svg" alt="" class="logo">
+            </div>
+            <ul>
 
-            </nav>
+                <Li><a href="index.html" class="navbar_item">Home</a></Li>
+                <Li><a href="menu.html" class="navbar_item">Menu</a></Li>
+                <Li><a href="" class="navbar_item">About</a></Li>
+                <Li><a href="" class="navbar_item">Contact</a></Li>
+                <Li><a href="menu.html" class="nav_login">Shop Now</a></Li>
+            </ul>
+
+        </nav>
 
     </head>
 
@@ -39,12 +39,7 @@
 
     <section>
 
-        <div class="banner_content">
-            <h1 class="banner_title">Good Days Start with Good Coffee </h1>
-            <p>The most beautiful start to your morning, <br>
-                welcomed by the rich aroma of freshly brewed coffee</p>
-            <a href="" class="order_now">Order Now</a>
-
+        <div class="menu_banner">
 
         </div>
     </section>
@@ -55,8 +50,14 @@
 
     <!-- coffee  -->
     <section class="menu_section">
+        <div class="menu_main">
+            <h1>Our Menu</h1>
+            <hr class="main_hr">
+            <p>"Freshly brewed coffee, handcrafted drinks, and delicious pastries made to brighten your day."</p>
+        </div>
         <div class="menu_container">
-            <h1 class="menu_title">Coffee</h1>
+
+            <h1 class="menu_title" id="coffee">Coffee</h1>
             <hr class="menu_line">
 
             <div class="menu_grid">
@@ -205,7 +206,7 @@
     <!-- MilkShake  -->
     <section class="menu_section">
         <div class="menu_container">
-            <h1 class="menu_title">MilkShake</h1>
+            <h1 class="menu_title" id="milk">MilkShake</h1>
             <hr class="menu_line">
 
             <div class="menu_grid">
@@ -219,15 +220,11 @@
                     <div class="menu_item_info">
                         <div class="menu_item_header">
                             <h3>Chocolate <br>MilkShake</h3>
-                            <span class="menu_price">3,000 MMK</span>
+                            <span class="menu_price">5,000 MMK</span>
                         </div>
 
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
+                        <p class="menu_desc">"Creamy chocolate ice cream blended with rich cocoa and topped with whipped
+                            cream."</p>
                         <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
                     </div>
                 </div>
@@ -242,15 +239,11 @@
                     <div class="menu_item_info">
                         <div class="menu_item_header">
                             <h3>Strawberry <br>MilkShake</h3>
-                            <span class="menu_price">3,000 MMK</span>
+                            <span class="menu_price">5,000 MMK</span>
                         </div>
 
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
+                        <p class="menu_desc">"A sweet blend of vanilla ice cream and fresh strawberries for a classic
+                            fruity taste."</p>
                         <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
                     </div>
                 </div>
@@ -264,14 +257,10 @@
                     <div class="menu_item_info">
                         <div class="menu_item_header">
                             <h3>Banana <br>MilkShake</h3>
-                            <span class="menu_price">3,500 MMK</span>
+                            <span class="menu_price">6,000 MMK</span>
                         </div>
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
+                        <p class="menu_desc">"Rich vanilla ice cream blended with sweet ripe bananas for a smooth,
+                            creamy treat."</p>
                         <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
                     </div>
                 </div>
@@ -285,14 +274,10 @@
                     <div class="menu_item_info">
                         <div class="menu_item_header">
                             <h3>Oreo <br>MilkShake</h3>
-                            <span class="menu_price">4,500 MMK</span>
+                            <span class="menu_price">6,000 MMK</span>
                         </div>
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
+                        <p class="menu_desc">"Vanilla ice cream blended with crunchy Oreo cookies, topped with chocolate
+                            drizzle."</p>
                         <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
                     </div>
                 </div>
@@ -303,96 +288,95 @@
     <!-- end milkshake -->
 
     <!-- start icecoffee -->
-     <section class="menu_section">
+    <section class="menu_section">
         <div class="menu_container">
-            <h1 class="menu_title">MilkShake</h1>
+            <h1 class="menu_title" id="ice">Ice Coffee</h1>
             <hr class="menu_line">
 
             <div class="menu_grid">
 
-                <!-- Item 1 chco milk -->
+                <!-- Item 1  -->
                 <div class="menu_card">
                     <div class="menu_img">
-                        <img src="Images/chocolate mik.jpg" alt="chocolate milkshake" class="menu_item_img">
+                        <img src="Images/iced-coffee-5.jpg" alt="Ice Coffee" class="menu_item_img">
 
                     </div>
                     <div class="menu_item_info">
                         <div class="menu_item_header">
-                            <h3>Chocolate <br>MilkShake</h3>
-                            <span class="menu_price">3,000 MMK</span>
-                        </div>
-
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
-                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
-                    </div>
-                </div>
-
-                <!-- Item 2 strawberrry milk -->
-                <div class="menu_card">
-                    <div class="menu_img">
-                        <img src="Images/Strawberry  MilkShake Recipe.jpg" alt="strawberry milkshake"
-                            class="menu_item_img">
-
-                    </div>
-                    <div class="menu_item_info">
-                        <div class="menu_item_header">
-                            <h3>Strawberry <br>MilkShake</h3>
-                            <span class="menu_price">3,000 MMK</span>
-                        </div>
-
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
-                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
-                    </div>
-                </div>
-
-                <!-- Item 4 Bana Milk -->
-                <div class="menu_card">
-                    <div class="menu_img">
-                        <img src="Images/banana milkshake.jpg" alt="Banana" class="menu_item_img">
-
-                    </div>
-                    <div class="menu_item_info">
-                        <div class="menu_item_header">
-                            <h3>Banana <br>MilkShake</h3>
+                            <h3>Ice Coffee</h3>
                             <span class="menu_price">3,500 MMK</span>
                         </div>
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
+
+                        <p class="menu_desc">"Traditional brewed coffee chilled over ice with a touch of sweet milk."
+                        </p>
                         <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
                     </div>
                 </div>
 
-                <!-- Item 4 Oreo Mikl-->
+                <!-- Item 2  -->
                 <div class="menu_card">
                     <div class="menu_img">
-                        <img src="Images/Oreo Milkshake Recipe.jpg" alt="Oreo MilkShake" class="menu_item_img">
+                        <img src="Images/ice americano1.jpg" alt="Ice Americano" class="menu_item_img">
 
                     </div>
                     <div class="menu_item_info">
                         <div class="menu_item_header">
-                            <h3>Oreo <br>MilkShake</h3>
+                            <h3>Ice Americano</h3>
+                            <span class="menu_price">3,800 MMK</span>
+                        </div>
+
+                        <p class="menu_desc">"A rich shot of espresso combined with chilled water for a pure coffee
+                            flavor."</p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 4-->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/ice caramel macchiato.jpg" alt="Ice Macchiato" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Ice Macchiato</h3>
+                            <span class="menu_price">5,500 MMK</span>
+                        </div>
+                        <p class="menu_desc">"Rich espresso poured over cold milk and finished with a sweet vanilla
+                            swirl."</p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/iced shaken espresso.jpg" alt="Ice Espresso" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Ice Espresso</h3>
+                            <span class="menu_price">5,500 MMK</span>
+                        </div>
+                        <p class="menu_desc">"Bold espresso shaken with milk and ice for a rich, smooth, and frothy
+                            finish."</p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 6  -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/ice latte.jpg" alt="Ice latte" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Ice latte</h3>
                             <span class="menu_price">4,500 MMK</span>
                         </div>
-                        <ul class="milkshake_item">
-                            <li>milk</li>
-                            <li>coco powder</li>
-                            <li>suger</li>
-                            <li>ice cream</li>
-                        </ul>
+                        <p class="menu_desc">"A smooth blend of rich espresso and perfectly chilled milk over ice."</p>
                         <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
                     </div>
                 </div>
@@ -400,7 +384,108 @@
             </div>
         </div>
     </section>
-     <!-- icecoffee -->
+    <!-- icecoffee -->
+
+    <!-- start cake and other -->
+    <section class="menu_section">
+        <div class="menu_container">
+            <h1 class="menu_title" id="cake">Cake and Other</h1>
+            <hr class="menu_line">
+
+            <div class="menu_grid">
+
+                <!-- Item 1 chco milk -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/choco ckae.jpg" alt="choco cake" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Chocolate Cake</h3>
+                            <span class="menu_price">3,000 MMK</span>
+                        </div>
+
+                        <p class="menu_desc">"Classic dark chocolate cake layered with rich premium chocolate ganache."
+                        </p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 strawberrry milk -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/strawbery cake.jpg" alt="strawberry cake" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Strawberry Cake</h3>
+                            <span class="menu_price">3,000 MMK</span>
+                        </div>
+
+                        <p class="menu_desc">"Light vanilla sponge cake topped with fresh strawberries and sweet cream."
+                        </p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 4 Bana Milk -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/blueberry cake.jpg" alt="Blueberry Cake" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Blueberry Cake</h3>
+                            <span class="menu_price">3,500 MMK</span>
+                        </div>
+                        <p class="menu_desc">"Smooth cream cheese on a crunchy crust, topped with sweet blueberry
+                            compote."</p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/croissant.jpg" alt="Croissant" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Croissant</h3>
+                            <span class="menu_price">4,500 MMK</span>
+                        </div>
+                        <p class="menu_desc">"Traditional French pastry, baked with premium butter for perfect crispy
+                            layers."</p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 5  -->
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="Images/sandwich.jpg" alt="Sandwich" class="menu_item_img">
+
+                    </div>
+                    <div class="menu_item_info">
+                        <div class="menu_item_header">
+                            <h3>Sandwich</h3>
+                            <span class="menu_price">4,500 MMK</span>
+                        </div>
+                        <p class="menu_desc">"Double-decker sandwich with grilled chicken, fresh veggies, and rich
+                            mayo."</p>
+                        <button class="add_to_cart"><i class="fa-solid fa-plus"></i> Add to Order</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end cake and other  -->
+
 
     <!-- Statr footer  -->
 
