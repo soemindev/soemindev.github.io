@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+</head>
+
+<body>
+    <h1>Student Register</h1>
+
+    <form action="" name="myfrom">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="sname"><br><br>
+
+        <label for="age">Age</label><br>
+        <input type="number" id="age" name="sage"><br><br>
+
+        <label for="address">Address</label><br>
+        <textarea name="saddress" id="address"></textarea><br><br>
+
+        <label for="register">Register</label><br>
+        <button type="button" onclick="showdata()">Register</button>
+    </form>
+
+    <h1>Student List</h1>
+    <table cellspaceing="0" cellpadding="20" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+
+        <tbody id="mybody">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        let studentList = []
+        function showdata() {
+
+            let name = document.myfrom.sname.value;
+            let age = document.myfrom.sage.value;
+            let address = document.myfrom.saddress.value;
+
+        
+
+        // console.log(student_list)
+
+        let student = {
+            studentname: name,
+            studentage: age,
+            studentaddress: address
+        }
+
+        // console.log(student)
+
+        studentList.push(student)
+
+        // console.log(studentList)
+        let html = '';
+        for (i = 0; i < studentList.length; i++) {
+
+            html += `
+            <tr>
+            <td>${i+1}</td>
+            <td>${studentList[i].studentname}</td>
+            <td>${studentList[i].studentage}</td>
+            <td>${studentList[i].studentaddress}</td>
+            </tr>`;
+
+        }
+
+        document.getElementById("mybody").innerHTML = html
+
+    }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

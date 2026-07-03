@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+</head>
+
+<body>
+    <h1>Student Register</h1>
+
+    <form action="" name="myform" onsubmit="return formvalidation()">
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name">
+        <small id="name_error"></small><br><br>
+
+
+        <label for="age">Age</label><br>
+        <input type="number" id="age" name="age">
+        <small id="age_error"></small><br><br>
+
+        <label for="address">Address</label><br>
+        <textarea name="address" id="address" name="address"></textarea>
+        <small id="address_error"></small><br><br>
+
+        <label for="register">Register</label><br>
+        <button type="submit" >Register</button>
+    </form>
+
+    <h1>Student List</h1>
+    <table cellspaceing="0" cellpadding="20" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+
+        <tbody id="mybody">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        let studentList = []
+        function formvalidation() {
+
+            let name = document.myform.name.value;
+            let age = document.myform.age.value;
+            let address = document.myform.address.value;
+
+
+
+        if(name == ''){
+                document.getElementById('name').style.border = '1px solid red';
+                document.getElementById('name_error').innerText= 'Student Name is requried';
+                document.getElementById('name_error').style.color= 'red';
+
+                return false;
+
+            }
+            else{
+                document.getElementById('name_error').style.color='none';
+                document.getElementById('name_error').innerText = '';
+            }
+            
+            if(age == ''){
+                document.getElementById('age').style.border = '1px solid red';
+                document.getElementById('age_error').innerText= 'Age is requried';
+                document.getElementById('age_error').style.color= 'red';
+
+                return false;
+
+            }
+            else{
+                document.getElementById('age_error').style.color='none';
+                document.getElementById('age_error').innerText = '';
+            }
+
+            if(address == ''){
+                document.getElementById('address').style.border = '1px solid red';
+                document.getElementById('address_error').innerText= 'Addreess is requried';
+                document.getElementById('address_error').style.color= 'red';
+
+                return false;
+
+            }
+            else{
+                document.getElementById('address_error').style.color='none';
+                document.getElementById('address_error').innerText = '';
+            }
+
+            // return true ;
+
+        
+
+        // console.log(student_list)
+
+        let student = {
+            studentname: name,
+            studentage: age,
+            studentaddress: address
+        }
+
+        // console.log(student)
+
+        studentList.push(student)
+
+        // console.log(studentList)
+        let html = '';
+        for (i = 0; i < studentList.length; i++) {
+
+            html += `
+            <tr>
+            <td>${i+1}</td>
+            <td>${studentList[i].studentname}</td>
+            <td>${studentList[i].studentage}</td>
+            <td>${studentList[i].studentaddress}</td>
+            </tr>`;
+
+        }
+
+        document.getElementById("mybody").innerHTML = html;
+
+        return false ;
+
+    }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

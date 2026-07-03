@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List </title>
+</head>
+
+<body>
+    <h1>Item List</h1>
+    <form action="" name="myform">
+        <label for="itemname">Item Name</label><br>
+        <input type="text" name="iName" id="itemname"><br><br>
+
+        <label for="itemprice">item Price</label><br>
+        <input type="number" name="iPrice" id="itemprice"><br><br>
+
+        <label for="qty">Qty</label><br>
+        <input type="number" name="iQty" id="qty"><br><br>
+
+        <button type="button" onclick="showdata()">Add Table </button><br><br>
+    </form>
+
+    <h1>Table </h1>
+    <table cellspecing="0" cellpadding="30" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                
+            </tr>
+            </tr>
+        </thead>
+
+        <tbody id="mybody">
+            
+
+        </tbody>
+
+    </table>
+
+    <script>
+
+        let itemlist = [];
+        
+
+        //get input data
+        function showdata() {
+            let name = document.myform.iName.value;
+            let price = document.myform.iPrice.value;
+            let qty = document.myform.iQty.value;
+            
+            
+
+            // console.log(name)
+            // console.log(price)
+            // console.log(qty)
+
+            // create object 
+            let item = {
+
+                item_name: name,
+                item_price: price,
+                item_qty: qty
+
+            }
+            // console.log(item)
+
+            //push array
+            itemlist.push(item);
+
+            // console.log(itemlist)
+
+            let html = ''
+            let grand_total= 0
+            for( i=0; i<itemlist.length ;i++ ){
+                let Total = itemlist[i].item_price * itemlist[i].item_qty;
+                grand_total += Total ;
+
+                html += 
+                    `<tr> 
+                        <td>${i+1}</td>
+                        <td>${itemlist[i].item_name}</td>
+                        <td>${itemlist[i].item_price}</td>
+                        <td>${itemlist[i].item_qty}</td>
+                        <td>${Total}</td>
+
+                        </tr>`
+                        
+                        
+                
+            }
+            html += `<tr>
+                <td colspan="4">Grand Total</td>
+                <td>${grand_total}</td>
+             </tr>`;
+
+
+            document.getElementById("mybody").innerHTML= html ;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

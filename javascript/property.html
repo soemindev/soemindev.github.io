@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property</title>
+</head>
+<body>
+    <h1>Property</h1>
+    <h2 id="setTextNode"></h2>
+
+    <button onclick="setTextNode()">Set Text Node</button>
+
+    <script>
+        function setTextNode(){
+            let h2 = document.getElementById('setTextNode')
+            h2.innerText="Hello World";
+            let textnoe = document.createTextNode('Hello World')
+            h2.appendChild(textnoe);
+        }
+    </script>
+
+
+</body>
+</html>

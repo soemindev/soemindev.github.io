@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <h1>Validation</h1>
+
+    <form action="" name="myform" onsubmit="return formvalidation()">
+
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email">
+        <small id="emailerror"></small><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="text" name="password" id="password">
+        <small id="passworderror"></small><br><br>
+
+        <button type="submit" >Log in</button>
+    </form>
+
+    <script>
+
+        function formvalidation(){
+            let email = document.myform.email.value;
+            let password = document.myform.password.value;
+
+            // console.log(email,password)
+
+            if(email == ''){
+                document.myform.email.style.boder = '1px solid red';
+                document.getElementById('emailerror').innerText= 'Email is requried';
+                document.getElementById('emailerror').style.color= 'red';
+
+                return false;
+
+            }
+            else{
+                document.getElementById('emailerror').style.color='none';
+                document.getElementById('emailerror').innerText = '';
+            }
+            
+            if(password == ''){
+                document.myform.password.style.boder = '1px solid red';
+                document.getElementById('passworderror').innerText= 'password is requried';
+                document.getElementById('passworderror').style.color= 'red';
+
+                return false;
+
+            }
+            else{
+                document.getElementById('passworderror').style.color='none';
+                document.getElementById('passworderror').innerText = '';
+            }
+
+            return true ;
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event</h1>
+    <img src="e50007d6d7ada36fbb7376ba08a378bc.jpg" alt="" width="200px" height="200px" onmouseover="big()" onmouseleave="normal()" id="myId">
+
+
+    <script>
+        //onuseover 
+        //o
+        function big(){
+            let myId =document.getElementById("myId")
+            myId.style.height="400px"
+            myId.style.width="400px"
+            myId.style.borderRadius="50%"
+        }
+
+        //onuserleave
+        function normal(){
+            let myId= document.getElementById("myId")
+            myId.style.height="200px"
+            myId.style.width="200px"
+            myId.style.borderRadius="0px"
+        }
+
+
+
+    </script>
+</body>
+</html>
