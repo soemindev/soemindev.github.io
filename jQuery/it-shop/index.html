@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script src="fontawesome/js/all.min.js"></script>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,11 @@
         <h1>IT Shop</h1>
         <div class="home">
             <a href="#">Home</a>
-            <button class="icon"><i class="fas fa-shopping-cart"></i> </button>
+            <div class="cart-container">
+                <a href="checkout.html"><i class="fa-solid fa-cart-shopping cart-icon"></i>
+                <span class="cart-badge" id="item_count">0</span></a>
+            </div>
+        
         </div>
     </nav>
 
@@ -27,7 +33,7 @@
             <div class="it_title">
                 <h3>Laptop 1</h3>
                 <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <a class="click addtocart" data-id="1" data-name="Laptop 1" data-price="2300000">Add to Cart</a>
             </div>
         </div>
 
@@ -35,8 +41,8 @@
             <img src="../it-shop/image/images/laptop1.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>Laptop 2</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:2000000MMK</p>
+                <a class="click addtocart" data-id="2" data-name="Laptop 2" data-price="2000000">Add to Cart</a>
             </div>
         </div>
 
@@ -44,8 +50,8 @@
             <img src="../it-shop/image/images/laptop2.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>Laptop 3</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:1900000MMK</p>
+                <a class="click addtocart" data-id="3" data-name="Laptop 3" data-price="1900000">Add to Cart</a>
             </div>
         </div>
 
@@ -53,8 +59,8 @@
             <img src="../it-shop/image/images/laptop3.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>Laptop 4</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:1850000MMK</p>
+                <a class="click addtocart" data-id="4" data-name="Laptop 4" data-price="1850000">Add to Cart</a>
             </div>
         </div>
 
@@ -63,8 +69,8 @@
             <img src="../it-shop/image/images/ip14pro.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>iPhone 1</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:3400000MMK</p>
+                <a class="click addtocart" data-id="5" data-name="iPhone 1" data-price="3400000">Add to Cart</a>
             </div>
         </div>
 
@@ -72,8 +78,8 @@
             <img src="../it-shop/image/images/ip14pro1.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>iPhone 2</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:3200000MMK</p>
+                <a class="click addtocart" data-id="6" data-name="iPhone 2" data-price="3200000">Add to Cart</a>
             </div>
         </div>
 
@@ -81,8 +87,8 @@
             <img src="../it-shop/image/images/ip14pro2.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>iPhone 3</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:3100000MMK</p>
+                <a class="click addtocart" data-id="7" data-name="iPhone 3" data-price="3100000">Add to Cart</a>
             </div>
         </div>
 
@@ -90,14 +96,14 @@
             <img src="../it-shop/image/images/ip14pro4.webp" alt="" class="it_img">
             <div class="it_title">
                 <h3>iPhone 4</h3>
-                <p>Price:2300000MMK</p>
-                <button class="click">Add to Cart</button>
+                <p>Price:3000000MMK</p>
+                <a class="click addtocart" data-id="8" data-name="iPhone 4" data-price="3000000">Add to Cart</a>
             </div>
         </div>
     </section>
     <!-- item laptop -->
 
-    <!-- item phone  -->
+    
 
 </body>
 

@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../Fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+* {
+    font-family: 'Inter';
+}
+
+/* start nav  */
+
+.logo {
+    width: 90px;
+}
+
+.navbar {
+    background-color: #ffffff !important;
+}
+
+.navbar_menu:hover {
+    color: #0d6efd !important;
+}
+
+/* end nav  */
+
+/* start banner  */
+.carousel_img {
+    height: 65vh;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.banner_font {
+    font-size: 20px;
+}
+
+/* end banner  */
+
+/* strart Category  */
+.category-item {
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+/* end category  */
+
+
+/* start new arrivals */
+.new-arrival-card {
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-arrival-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+
+.product-img-holder {
+    height: 220px;
+    background-color: #ffffff !important;
+    border-radius: 16px 16px 0 0;
+}
+
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.new-arrival-card:hover .product-img {
+    transform: scale(1.08);
+}
+
+.action-btn {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.new-arrival-card:hover .action-btn {
+    background-color: #215bf0 !important;
+    transform: translateX(2px);
+}
+
+/* end new arriavls  */
+
+
+/* trade in  */
+.trade-banner {
+    height: 600px;
+    background-color: #f5f5f7;
+}
+
+
+.trade-banner img {
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.max-w-600 {
+    width: 600px;
+}
+
+
+.custom-trade-btn {
+    transition: all 0.3s ease;
+}
+
+.custom-trade-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* end trade in  */
+
+/* Feature Card Hover Effect */
+.feature-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* end chosse  */
+
+/* start best seller */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* end best seller  */
+
+/* Installment  */
+.width-700 {
+    max-width: 700px;
+}
+
+.step-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.brand-logos .badge {
+    color: #1d1d1f !important;
+    font-weight: 600;
+}
+/* end Insdtallment  */
+
+/* start footer  */
+.footer {
+    background-color: #0a0a0a;
+}
+
+.footer_navlink:hover {
+    color: #0d6efd !important;
+}
+/* end footer */
+
+/* start detail  */
+.product-badge-new {
+    background-color: #0d6efd;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.price-current {
+    color: #0d6efd;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.price-original {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 1.1rem;
+}
+
+.price-save {
+    background-color: #ff3b30;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Color Options Style */
+.color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.color-dot.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0d6efd;
+}
+
+.color-cosmic-orange {
+    background-color: #f26522;
+}
+.color-black{
+    background-color: #0a0a0a;
+}
+
+.color-deep-blue {
+    background-color: #3b4252;
+}
+
+.color-silver {
+    background-color: #e5e9f0;
+}
+
+/* Storage Buttons Style */
+.btn-storage {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #fff;
+}
+
+.btn-storage.active {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 1px #0d6efd;
+    font-weight: 600;
+}
+
+.btn-storage:disabled {
+    background-color: #f5f5f5;
+    color: #aaa;
+    border-color: #eee;
+    cursor: not-allowed;
+}
+
+/* Thumbnails Styling */
+.thumb-box {
+    width: 54px;
+    height: 54px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.thumb-box.active,
+.thumb-box:hover {
+    border-color: #0d6efd;
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Quantity Control Styling */
+.qty-box {
+    max-width: 130px;
+    background: #f5f5f7;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.qty-btn {
+    border: none;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* start product detail */
+
+.thumb_img{
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+}
+
+/* end product detail */

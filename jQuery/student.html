@@ -191,6 +191,42 @@
                 
 
             })
+
+            // for update 
+            $('#upd').click(function(){
+                let key = $('#key').val();
+                let name = $('#upd_name').val();
+                let email = $('#upd_email').val();
+                let phone = $('#upd_phone').val();
+                let year = $('#upd_year').val();
+
+                console.log(key,name,email,phone,year);
+
+                let studentData = localStorage.getItem('students_key');
+
+                if(studentData){
+                    let stuArray= JSON.parse(studentData);
+
+                    console.log(stuArray[key].stu_name);
+
+                    stuArray[key].stu_name = name;
+                    stuArray[key].stu_email = email;
+                    stuArray[key].stu_phone = phone;
+                    stuArray[key].stu_year = year;
+
+                    let studentString=JSON.stringify(stuArray);
+                    localStorage.setItem('students_key',studentString)
+
+                    getdata();
+
+                    
+                }
+
+
+                
+
+
+            })
         })
     </script>
 

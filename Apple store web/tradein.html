@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Apple Store </title>
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="CSS/CSS.css">
+
+
+
+
+</head>
+
+<body style="background-color: #e7e7eb;">
+
+    <!-- start nav  -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Image/logo 1.png" alt="Logo" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item fs-6 ms-4 fw-bold">
+                        <a class="nav-link navbar_menu active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item fs-6 ms-4 dropdown fw-bold">
+                        <a class="nav-link navbar_menu active dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="product.html">iPhone</a></li>
+                            <li><a class="dropdown-item" href="product.html">iPad</a></li>
+                            <li><a class="dropdown-item" href="product.html">Mac</a></li>
+                            <li><a class="dropdown-item" href="product.html">Watch</a></li>
+                            <li><a class="dropdown-item" href="product.html">AirPods</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item fs-6 ms-4 fw-bold">
+                        <a class="nav-link navbar_menu active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item fs-6 ms-4 fw-bold">
+                        <a class="nav-link navbar_menu active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item fs-6 ms-4 dropdown fw-bold">
+                        <a class="nav-link navbar_menu active dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Support
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tradein.html">Trade in</a></li>
+                            <li><a class="dropdown-item" href="installment.html">Installment Plan</a></li>
+                            <li><a class="dropdown-item" href="product.html">Service</a></li>
+                            <li><a class="dropdown-item" href="product.html"></a></li>
+                            <li><a class="dropdown-item" href="product.html"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item fs-6  mt-3 mt-md-0">
+                        <a class="nav-link position-relative" href="login.html">
+                            <i class="fa-solid fa-user fa-xl"></i>
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item fs-6 ms-1 mt-3 mt-md-0">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                            <span
+                                class="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
+                                4
+                            </span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end  -->
+
+    <div class="py-5 bg-white border-bottom">
+        <div class="container text-center py-4">
+            
+            <h1 class="display-5 fw-bold text-dark mb-3">အဟောင်းပေး၊ အသစ်ယူ။</h1>
+            <p class="fs-5 text-secondary col-lg-8 mx-auto">
+                မင်းရဲ့ iPhone, iPad သို့မဟုတ် Mac စက်ဟောင်းတွေကို ဈေးနှုန်းမှန်ကန်စွာ လဲလှယ်ပြီး စက်သစ်တစ်လုံးကို
+                သက်သာသော ဈေးနှုန်းဖြင့် အလွယ်တကူ အဆင့်မြှင့်တင်လိုက်ပါ။
+            </p>
+        </div>
+    </div>
+
+    <!-- Start Trade-in Terms & Conditions Section -->
+    <div class="container my-5">
+
+        <ul class="nav nav-pills justify-content-center gap-2 mb-4" id="deviceTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-pill px-4 fw-bold" id="mac-tab" data-bs-toggle="tab"
+                    data-bs-target="#mac-pane" type="button" role="tab">
+                    <i class="fa-solid fa-laptop me-2"></i>Mac
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-4 fw-bold" id="iphone-tab" data-bs-toggle="tab"
+                    data-bs-target="#iphone-pane" type="button" role="tab">
+                    <i class="fa-solid fa-mobile-screen me-2"></i>iPhone
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-4 fw-bold" id="ipad-tab" data-bs-toggle="tab"
+                    data-bs-target="#ipad-pane" type="button" role="tab">
+                    <i class="fa-solid fa-tablet-screen-button me-2"></i>iPad
+                </button>
+            </li>
+        </ul>
+
+
+        <div class="tab-content" id="deviceTabContent">
+
+            <!-- Mac  -->
+            <div class="tab-pane fade show active" id="mac-pane" role="tabpanel" aria-labelledby="mac-tab">
+                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white ">
+                    <h4 class="fw-bold text-black mb-3">Mac Trade-in Terms &amp; Conditions</h4>
+                    <ul class="text-secondary lh-lg mb-4 fs-6">
+                        <li class="mb-2">
+                            Trade-in Service များကို M1 Chip Set Model မှ စပြီး လုပ်ဆောင်နိုင်ပါသည်။ (သတ်မှတ်ထားသော
+                            Model အထိသာ)
+                        </li>
+                        <li class="mb-2">
+                            Trade-in သည် မည်သည့် Apple Devices ကိုမဆို လုပ်ဆောင်နိုင်ပါသည်။ Device အဟောင်း Amount ထက်
+                            ပိုများသော Apple Device ကိုသာ Trade-in ဆောင်ရွက်ပေးပါမည်။ Refund ပြန်လည်မဆောင်ရွက်ပေးပါ။
+                            (Eg. iPhone to iPad, MacBook to iPhone, iPad to iPhone, etc.)
+                        </li>
+                        <li class="mb-2">
+                            Trade-in လုပ်ဆောင်နိုင်မည့် Model များမှ MacBook Customized Model Items များကို Trade-in
+                            လုပ်ဆောင်မည်ဆိုပါက Device ၏ Conditions အား သေချာစွာ စစ်ဆေးပြီးလျှင် Trade-in Price အား
+                            သက်ဆိုင်ရာ သတ်မှတ်ပေးမည်ဖြစ်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            iMac တွင် Power Cord and Power Adapter မပါရှိပါက Trade-in Service လုပ်ဆောင်၍ မရပါ။
+                        </li>
+                        <li class="mb-2">
+                            CH/A, Dubai Region (AE) Device နှင့် Europe ဘက်မှ Region များအား မကောက်ခံပါ။
+                        </li>
+                        <li class="mb-2">
+                            Trade-in Device ဈေးနှုန်းအား မိမိ Device Condition အလိုက် Calculator တွင် ရွေးချယ်ပြီး
+                            Estimated Price အား သိရှိနိုင်မည်ဖြစ်ပါသည်။
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Reject Conditions Section -->
+                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white mt-4">
+                    <h4 class="fw-bold text-black mb-3">Reject Conditions</h4>
+
+                    <ul class="text-secondary lh-lg mb-0 fs-6">
+                        <li class="mb-2">
+                            Display/ Screen မျက်နှာပြင်တွင် သိသာသော အစင်းရာ၊ ခြစ်ရာ၊ ထိခိုက်ထားသည့် အမဲစက် ရှိနေခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Body အပေါ်ဖက်နှင့် အောက်ခြေတွင် သိသာသော အစင်းရာ၊ ခြစ်ရာ၊ ထိခိုက်ထားသည့် အမဲ့ရာ ရှိနေခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            စရောင်ထားဖူးခြင်း၊ စက်ဖွင့် ပြုပြင်ထားခြင်း၊ Parts များ လဲလှယ်ဆောင်ရွက်ထားခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Key ခလုတ်များ ပျက်စီးနေခြင်း၊ ပုံမှန်အသုံးပြုနိုင်သည့် အခြေအနေမရှိခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Trackpad, Touch Bar, Finger Print, Ports များ အလုပ်မလုပ်ခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Face Time Camera, Internal Functions များ အလုပ်မလုပ်ခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Speaker ပုံမှန် အသံမထွက်ခြင်း၊ Screw များ ပုံမှန်မဟုတ်ခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Apple ID Sign Out ပြုလုပ်၍ မရခြင်း၊ OS/ Re-install ပြုလုပ်၍ မရခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            16 inches များတွင် Logo Cover အတွင်းအပြင် ထိခိုက်မှု ရှိထားခြင်း။
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- iPhone  -->
+            <div class="tab-pane fade" id="iphone-pane" role="tabpanel" aria-labelledby="iphone-tab">
+                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white">
+                    <h4 class="fw-bold text-dark mb-3">iPhone Trade-in Terms &amp; Conditions</h4>
+                    <ul class="lh-lg text-secondary">
+                        <li class="mb-2">
+                            Trade-in Service များကို <strong>iPhone 11 Series</strong> မှ စတင်လုပ်ဆောင်လို့ရနိုင်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            IMEI သည် CEIR စနစ်တွင် အခွန်ဆောင်ရန် ကျန်ရှိပါက Trade-in Base Price ဖြင့်
+                            လက်ခံဆောင်ရွက်ပေးမည်ဖြစ်ပြီး Paid ဆောင်ရွက်ပြီးသား Device ဖြစ်ပါက Bonus Price ဖြင့်
+                            တိုးမြှင့်
+                            Trade-in ဆောင်ရွက်ပေးမည်ဖြစ်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            iPhone 11 Series မှ iPhone 17 Series အထိ လက်ခံပြီး Trade-Up (အဟောင်းပေး အသစ်ယူ) သာ
+                            ပြုလုပ်နိုင်ပါသည်။ (iPhone 16e, iPhone 17e and iPhone Air မပါဝင်ပါ)
+                        </li>
+                        <li class="mb-2">
+                            Apple Official Genuine Part ဖြင့် ပြင်ဆင်ထားသော Device များကို Trade-in လုပ်ဆောင်နိုင်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            Battery Service ပြနေသော Device များအား Trade-in လက်ခံဆောင်ရွက်ပေးပါမည်။
+                        </li>
+                        <li class="mb-2">
+                            Camera (ရှေ့/နောက်) ကင် အစက်အပြောက် (Spots)၊ ဖုန်မှုန့် (Dust) နှင့် အရောင်ပြောင်းလဲမှုများ
+                            ပါရှိသော
+                            Conditions အပေါ်မူတည်၍ Trade-in လက်ခံဆောင်ရွက်ပါမည်။
+                        </li>
+                        <li class="mb-2">
+                            Refurbished Device များနှင့် Unknown Part ပြနေသော Device များ Trade-in လက်မခံပါ။
+                        </li>
+                        li class="mb-2">
+                        iPhone 15 Pro/Pro Max နှင့် iPhone 16 Series, iPhone 17 Series (CH/A) <strong>(AI Support
+                            မပြုလုပ်နိုင်ပါသဖြင့်)</strong>
+                        </li>
+                        <li class="mb-0">
+                            AE (Dubai/UAE) Region များ <strong>(Face Time Support မပြုလုပ်နိုင်ပါသဖြင့်)</strong>
+                        </li>
+                    </ul>
+                    <h6 class="fw-bold text-dark mb-3">
+                        အောက်ပါ Region များကို Trade-in လက်ခံမည်မဟုတ်ပါ -
+                    </h6>
+
+                    <!-- Restricted Region List -->
+                    <ul class="text-secondary lh-lg mb-0 fs-6">
+                        <li class="mb-2">
+                            iPhone 15 Pro/Pro Max နှင့် iPhone 16 Series, iPhone 17 Series (CH/A) <strong>(AI Support
+                                မပြုလုပ်နိုင်ပါသဖြင့်)</strong>
+                        </li>
+                        <li class="mb-0">
+                            AE (Dubai/UAE) Region များ <strong>(Face Time Support မပြုလုပ်နိုင်ပါသဖြင့်)</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- iPad  -->
+            <div class="tab-pane fade" id="ipad-pane" role="tabpanel" aria-labelledby="ipad-tab">
+
+                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white">
+                    <h4 class="fw-bold text-dark mb-3">iPad Trade-in Terms &amp; Conditions</h4>
+
+                    <ul class="text-secondary lh-lg mb-4 fs-6">
+                        <li class="mb-2">
+                            Trade-in Service များကို iPad Mini, iPad Air 4, iPad Air 5, iPad 9, iPad 10, M1, M2 Chip, M3
+                            Chip and M4 Chip Model များ လုပ်ဆောင်လို့ရနိုင်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            iPad 5G Devices များအား Tax Paid ဆောင်ရွက်ပြီးမှသာ Trade-in ကောက်ခံပါမည်။
+                        </li>
+                        <li class="mb-2">
+                            2 Devices to 1 Device Service လည်း ရယူနိုင်ပါသည်။ (<strong>မှတ်ချက်- Device အဟောင်း Amount
+                                ထက် ပိုများသော Apple Device ကိုသာ Trade-in ပြုလုပ်နိုင်ပါသည်။ Refund
+                                မဆောင်ရွက်ပေးပါ။</strong>)
+                        </li>
+                        <li class="mb-2">
+                            CH/A, Dubai Region (AE) Device နှင့် Europe ဘက်မှ Region များအား မကောက်ခံပါ။
+                        </li>
+                        <li class="mb-2">
+                            Refurbished Device, Unknown Part ပေါ်နေသော Device များအား မကောက်ခံပါ။
+                        </li>
+                        <li class="mb-2">
+                            Apple ဘက်မှ Official Repair or Replacement ပြုလုပ်ပေးထားသော Genuine Part Device များအား
+                            ကောက်ခံပါမည်။
+                        </li>
+                        <li class="mb-2">
+                            Trade-in ပြုလုပ်သည့် Deviceများသည် Device Conditions ကို စစ်ဆေးချိန်တွင်
+                            ချက်ချင်းမသိရှိနိုင်သော Error များ ရှိနိုင်ပါသည်။ ထို့ကြောင့် စစ်ဆေးပြီး
+                            ဈေးသတ်မှတ်ပြီးသော်လည်း Data ကူးပြီး Device အား Erase ချပြီးမှ Error ဖြစ်ပေါ်လာနိုင်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            Reset ချပြီးမှ ပေါ်ပေါက်လာနိုင်သော Error များ၊ LCD Green Screen များ၊ Camera Spot
+                            များဖြစ်နိုင်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            Error ဖြစ်ပေါ်လာသည့် Error အလိုက် အဆိုးအကောင်းပေါ်မူတည်၍ ဈေးနှုန်းများ ထပ်မံနှုတ်ယူမည်
+                            ဖြစ်ပါသည်။
+                        </li>
+                        <li class="mb-2">
+                            Trade-in Device များအား Data ကူးသည့်အချိန်နှင့် Reset ချသည့်အချိန်တွင် Customer
+                            ကိုယ်တိုင်စောင့်ဆိုင်းပေးရပါမည်။
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Reject Conditions Section -->
+                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white mt-4">
+                    <h4 class="fw-bold text-dark mb-3">Reject Conditions</h4>
+
+                    <ul class="text-secondary lh-lg mb-0 fs-6">
+                        <li class="mb-2">
+                            Battery Service ပြနေခြင်း၊ Battery Drain Test Fail ခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Battery Cycle Count 300 နှင့်အထက်ရှိခြင်း၊ Important Battery Message ပေါ်နေခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            LCD ကွဲနေခြင်း၊ Important Display Message ပေါ်နေခြင်း၊ အမဲစက်ရှိခြင်း၊ အက်နေခြင်း၊
+                            ခြစ်ရာရှိခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Body ကွေးနေခြင်း၊ Body ကွဲနေခြင်း၊ ချိုင့်နေခြင်း၊ ပဲ့နေခြင်း၊ ခြစ်ရာရှိခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Camera ကွဲနေခြင်း၊ လဲထားခြင်း၊ Camera အမဲစက်ရှိနေခြင်း၊ Camera လေဆာထိထားခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Face ID Fail နေခြင်း၊ အလုပ်မလုပ်ခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Speaker အသံအက်နေခြင်း၊ စကာများ ပေါက်နေခြင်း၊ သံချေးတက်နေခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            အောက်နား screw များ ချောင်နေခြင်း၊ ပုံမမှန်ခြင်း၊ သံချေးတက်နေခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            စရောင်ဖူးခြင်း၊ LIC နီနေခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            Function ပိုင်းတွင် တစ်ခုခုတစ်ခုရာ Error ရှိခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            ASSP မဟုတ်သည့် အခြား Service Center တွင် ပြုပြင်ဖူးထားခြင်း။
+                        </li>
+                        <li class="mb-2">
+                            <strong>Remarks: Device Condition ပေါ်မူတည်ပြီး Deduction Price များ
+                                ထပ်ရှိနိုင်ပါသည်။</strong>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Trade-in Terms & Conditions Section -->
+
+    <!-- Trade-In Process -->
+    <section class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">Trade-In ပြုလုပ်နည်း (၃) ဆင့်</h2>
+            <p class="text-muted">လွယ်ကူရှင်းလင်းသော အဆင့်များဖြင့် စက်သစ်သို့ လဲလှယ်ပါ</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Step 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 text-center">
+                    <div class="rounded-circle bg-primary-subtle text-primary mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="width: 70px; height: 70px;">
+                        <i class="fa-solid fa-mobile-screen-button fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">၁။ စက်ယူဆောင်လာပါ</h5>
+                    <p class="text-muted small mb-0">မိမိ၏ စက်ဟောင်းကို ဆိုင်သို့ ယူဆောင်လာပါ သို့မဟုတ် အောက်ပါ Form မှ
+                        အချက်အလက်များ ပို့ပေးပါ။</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 text-center">
+                    <div class="rounded-circle bg-primary-subtle text-primary mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="width: 70px; height: 70px;">
+                        <i class="fa-solid fa-calculator fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">၂။ ဈေးနှုန်းစစ်ဆေးမည်</h5>
+                    <p class="text-muted small mb-0">ကျွမ်းကျင်ပညာရှင်များမှ Hardware & Software အခြေအနေကို စစ်ဆေးပြီး
+                        အမြင့်ဆုံး တန်ဖိုးဖြတ်ပေးပါမည်။</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 text-center">
+                    <div class="rounded-circle bg-primary-subtle text-primary mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="width: 70px; height: 70px;">
+                        <i class="fa-solid fa-arrows-rotate fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">၃။ စက်သစ်လဲလှယ်ပါ</h5>
+                    <p class="text-muted small mb-0">ထွက်ရှိလာသော တန်ဖိုးကို စက်သစ်ဝယ်ယူသည့် ပမာဏထဲမှ နှုတ်ပယ်ပြီး
+                        စက်သစ်ကို ချက်ချင်း ရယူလိုက်ပါ။</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start form  -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5">
+                    <h3 class="fw-bold text-dark mb-2 text-center fs-4">စက်ဟောင်း တန်ဖိုးခန့်မှန်းချက် တောင်းဆိုရန်</h3>
+                    <p class="text-muted text-center mb-4">စက်အကြောင်း အချက်အလက်များကို ဖြည့်စွက်ပေးပါ</p>
+
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Name</label>
+                                <input type="text" class="form-control rounded-3" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Ph no.</label>
+                                <input type="tel" class="form-control rounded-3" placeholder="09xxxxxxxxx">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Device Category</label>
+                                <select class="form-select rounded-3">
+                                    <option selected>iPhone</option>
+                                    <option>iPad</option>
+                                    <option>MacBook / Mac</option>
+                                    <option>Apple Watch</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Model (eg - iPhone 13 Pro)</label>
+                                <input type="text" class="form-control rounded-3"
+                                    placeholder="iPhone 13 Pro Max (128GB)">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">စက်၏ လက်ရှိအခြေအနေ</label>
+                                <select class="form-select rounded-3">
+                                    <option selected>အကွဲအပြဲမရှိ၊ လုပ်ဆောင်ချက်အားလုံး ပုံမှန်အလုပ်လုပ်သည်</option>
+                                    <option>အနည်းငယ် ပွန်းပဲ့ရာရှိသည်</option>
+                                    <option>မှန်အကွဲ သို့မဟုတ် မှန်ပြင်ထိခိုက်ထားသည်</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">ဖြည့်စွက်ချက်များ (အပိုပစ္စည်းပါ/မပါ)</label>
+                                <textarea class="form-control rounded-3" rows="3"
+                                    placeholder="ဥပမာ - ဘူးနှင့် ကြိုးပါသည်၊ Battery Health 85%"></textarea>
+                            </div>
+
+                            <div class="col-12 mt-4 text-center">
+                                <button type="submit" class="btn btn-dark rounded-pill px-5 py-2 fw-bold fs-6">
+                                    တန်ဖိုးတွက်ချက်ခိုင်းမည် <i class="fa-solid fa-paper-plane ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end form  -->
+
+    <footer class="text-white py-5 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="index.html"><img src="Image/logo 2.png" alt="" class="w-25 "></a>
+                    
+
+                    <!-- Social Icons -->
+                    <div class="list-inline mb-0 mt-3">
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-viber"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Link  -->
+                <div class="col-6 col-md-6 col-lg-2 mb-3">
+                    <h5 class="text-uppercase mb-3">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">Home</a></li>
+                        <li class="mb-2"><a href="index.html"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">About</a></li>
+                        
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support  -->
+                <div class="col-6 col-md-6 col-lg-3 mb-3">
+                    <h5 class="text-uppercase mb-3">Support</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">Trade-in</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">Installment</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">Service</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 fs-6 text-decoration-none footer_navlink">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <h5 class="text-uppercase mb-3">Contact Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-white-50 fs-6 text-decoration-none footer_navlink"><i
+                                    class="fa-solid fa-map-marker-alt"></i> Yangon</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 fs-6 text-decoration-none footer_navlink"><i
+                                    class="fa-solid fa-phone"></i> 09 984 767 21</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 fs-6 text-decoration-none footer_navlink"><i
+                                    class="fa-solid fa-envelope"></i> soem4529@gmail.com</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 fs-6 text-decoration-none footer_navlink"><i
+                                    class="fa-solid fa-clock"></i> Mon - Sun: 9:00 AM - 8:00 PM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+
+            <p class="text-center text-white-50 fs-6 mb-0">Copyright &copy; Apex Apple Shop 2026. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script src="JS/jquery-4.0.0.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <!-- custom js -->
+    <script src="JS/Javascript.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- icon -->
+    <script src="fontawesome/js/all.min.js"></script>
+</body>
+
+</html>
