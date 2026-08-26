@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Birthday Scrapbook Album</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffe5ec 0%, #ffc2d1 50%, #e7c6ff 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      perspective: 2000px;
+    }
+
+    .heart-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .floating-heart {
+      position: absolute;
+      bottom: -50px;
+      color: #ff758f;
+      font-size: var(--size);
+      left: var(--left);
+      animation: floatUp var(--duration) linear infinite;
+      animation-delay: var(--delay);
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .app-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+
+    /* Step 1 Cake View */
+    #step1 {
+      display: flex;
+    }
+
+    .step-1-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      border: 2px solid #fff;
+      box-shadow: 0 15px 35px rgba(255, 117, 143, 0.25);
+    }
+
+    .cake-wrapper {
+      position: relative;
+      margin: 0 auto 20px auto;
+      width: 120px;
+    }
+
+    .glow-ring {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(255, 182, 193, 0.8) 0%, transparent 70%);
+      top: -10px;
+      left: -10px;
+      border-radius: 50%;
+      animation: pulseGlow 2.5s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scale(1.3);
+        opacity: 0.9;
+      }
+    }
+
+    .cake {
+      width: 120px;
+      height: 100px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .layer-3 {
+      width: 120px;
+      height: 35px;
+      background: linear-gradient(135deg, #ff85a1, #ff4d6d);
+      border-radius: 10px 10px 15px 15px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .layer-2 {
+      width: 95px;
+      height: 32px;
+      background: linear-gradient(135deg, #ffffff, #ffe6ea);
+      border-radius: 8px;
+      position: absolute;
+      bottom: 33px;
+      left: 12.5px;
+    }
+
+    .layer-1 {
+      width: 70px;
+      height: 28px;
+      background: linear-gradient(135deg, #fbb1bd, #ff9ebb);
+      border-radius: 8px 8px 0 0;
+      position: absolute;
+      bottom: 63px;
+      left: 25px;
+    }
+
+    .candle {
+      width: 8px;
+      height: 22px;
+      background: repeating-linear-gradient(45deg, #fff, #fff 4px, #ff758f 4px, #ff758f 8px);
+      position: absolute;
+      bottom: 90px;
+      left: 56px;
+      border-radius: 3px;
+    }
+
+    .flame {
+      width: 12px;
+      height: 18px;
+      background: radial-gradient(ellipse at bottom, #fff 0%, #ffea00 30%, #ff4800 100%);
+      border-radius: 50% 50% 20% 20%;
+      position: absolute;
+      top: -16px;
+      left: -2px;
+      box-shadow: 0 0 12px #ffea00, 0 0 20px #ff4800;
+      animation: flameFlicker 0.15s infinite alternate ease-in-out;
+    }
+
+    @keyframes flameFlicker {
+      0% {
+        transform: scale(1) rotate(-3deg);
+      }
+
+      100% {
+        transform: scale(1.2) rotate(3deg);
+      }
+    }
+
+    .typewriter-text {
+      font-family: 'Dancing Script', cursive;
+      color: #c9184a;
+      font-size: 2em;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff758f;
+      width: 0;
+      margin: 15px auto;
+      animation: typing 3.2s steps(22) forwards, blink 0.6s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #ff758f;
+      }
+    }
+
+    .btn-next {
+      background: linear-gradient(135deg, #ff758f, #ff4d6d);
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 1.05em;
+      font-weight: 600;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+      opacity: 0;
+      animation: fadeInBtn 0.5s ease 3.3s forwards;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-next:hover {
+      transform: scale(1.05);
+      color: #fff;
+    }
+
+    @keyframes fadeInBtn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Step 2 Book View */
+    #step2 {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    .book-stage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 420px;
+      position: relative;
+      perspective: 1500px;
+    }
+
+    .book-scaler {
+      transform-origin: center center;
+      transition: transform 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .book-pivot {
+      position: relative;
+      width: 500px;
+      /* စာမျက်နှာနှစ်ဘက်စာ အကျယ်အဝန်း (250px x 2) */
+      height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .book-wrapper {
+      width: 250px;
+      height: 420px;
+      position: absolute;
+      left: 50%;
+      margin-left: -125px;
+      /* အစအပိတ် အနေအထားအားလုံးမှာ အလယ်တည့်တည့် အမြဲရောက်စေရန် */
+      transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transform-style: preserve-3d;
+    }
+
+    /* စာအုပ်ဖွင့်လိုက်ချိန် (စာမျက်နှာ နှစ်ဘက်လုံး ပေါ်လာစေရန် ညာဘက်သို့ အနည်းငယ် ရွှေ့ပေးခြင်း) */
+    .book-wrapper.open {
+      transform: translateX(125px);
+    }
+
+    /* နောက်ဆုံးအဖုံးသို့ ရောက်ချိန် */
+    .book-wrapper.closed-back {
+      transform: translateX(250px);
+    }
+
+
+
+    .sheet {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+      transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .page-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background: #fff5f7;
+      border: 3px solid #ffb3c1;
+      border-radius: 0 16px 16px 0;
+      padding: 12px;
+      box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.4), 5px 10px 20px rgba(255, 117, 143, 0.15);
+      overflow-y: auto;
+    }
+
+    .page-face.left-side {
+      border-radius: 16px 0 0 16px;
+    }
+
+    .page-face.back {
+      transform: rotateY(180deg);
+      border-radius: 16px 0 0 16px;
+    }
+
+    .sheet.flipped {
+      transform: rotateY(-180deg);
+    }
+
+    #sheet1 {
+      z-index: 3;
+    }
+
+    #sheet2 {
+      z-index: 2;
+    }
+
+    #sheet3 {
+      z-index: 1;
+    }
+
+    #sheet1.flipped {
+      z-index: 1;
+    }
+
+    #sheet2.flipped {
+      z-index: 2;
+    }
+
+    #sheet3.flipped {
+      z-index: 3;
+    }
+
+    .page-face::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .page-face::-webkit-scrollbar-thumb {
+      background: #ff758f;
+      border-radius: 10px;
+    }
+
+    .scrap-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.1em;
+      color: #800f2f;
+      text-align: center;
+    }
+
+    .badge-tag {
+      background: #ffccd5;
+      color: #a4133c;
+      font-family: 'Caveat', cursive;
+      font-weight: bold;
+      font-size: 1em;
+      padding: 2px 10px;
+      border-radius: 12px;
+      display: inline-block;
+      margin: 4px 0;
+      border: 1px dashed #ff758f;
+      transform: rotate(-2deg);
+    }
+
+    .polaroid {
+      background: #fff;
+      padding: 4px 4px 8px 4px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(255, 117, 143, 0.2);
+      display: inline-block;
+      position: relative;
+    }
+
+    .polaroid::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 30%;
+      width: 30px;
+      height: 8px;
+      background: rgba(255, 182, 193, 0.5);
+      border: 1px dashed #ff758f;
+      transform: rotate(-2deg);
+    }
+
+    .polaroid img {
+      width: 75px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .heart-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4px;
+      width: 140px;
+      margin: 6px auto;
+      padding: 4px;
+      border: 2px dashed #ff85a1;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .grid-img {
+      width: 100%;
+      height: 35px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #ffccd5;
+    }
+
+    .scrap-text {
+      font-family: 'Caveat', cursive;
+      font-size: 0.85em;
+      color: #590d22;
+      line-height: 1.35;
+      text-align: justify;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 8px;
+      border-left: 4px solid #ff758f;
+      margin: 15px 0;
+      box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+    }
+
+    .controls-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #ff758f, #ff4d6d);
+      color: white;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 20px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(255, 77, 109, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+      transform: scale(1.05);
+      color: white;
+    }
+
+    .nav-btn:disabled {
+      background: #e0e0e0;
+      color: #a0a0a0;
+      box-shadow: none;
+    }
+
+    .page-indicator {
+      color: #590d22;
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .book-stage {
+        height: 360px;
+      }
+
+      .book-scaler {
+        transform: scale(0.75);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .book-stage {
+        height: 290px;
+      }
+
+      .book-scaler {
+        transform: scale(0.58);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="heart-bg" id="heartBg"></div>
+
+  <div class="container app-container">
+
+    <!-- STEP 1: Birthday Cake Card -->
+    <div class="row justify-content-center" id="step1">
+      <div class="col-11 col-sm-8 col-md-6 col-lg-4 text-center">
+        <div class="step-1-card p-4">
+          <div class="cake-wrapper">
+            <div class="glow-ring"></div>
+            <div class="cake">
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
+              <div class="layer-1"></div>
+              <div class="layer-2"></div>
+              <div class="layer-3"></div>
+            </div>
+          </div>
+          <h1 class="typewriter-text">Happy Birthday my Love!</h1>
+          <button class="btn btn-next" onclick="goToStep2()">Open Scrapbook 📖✨</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Scrapbook Album -->
+    <div id="step2">
+
+      <div class="book-stage">
+        <div class="book-scaler">
+          <div class="book-pivot">
+            <div class="book-wrapper" id="bookWrapper">
+
+              <!-- SHEET 1 -->
+              <div class="sheet" id="sheet1">
+                <div class="page-face d-flex flex-column justify-content-center align-items-center"
+                  style="background: linear-gradient(135deg, #ff85a1, #fbb1bd); border: 4px solid #fff;">
+                  <div style="font-size: 2.8em; margin-bottom: 5px;">🎀</div>
+                  <div class="scrap-title text-white"
+                    style="font-size: 2.1em; text-shadow: 0 2px 8px rgba(0,0,0,0.15);">Scrapbook Album</div>
+                  <div class="badge-tag bg-white text-danger mt-3" style="font-size: 1em;">💖 Happy Birthday My Girl
+                    💖</div>
+                  <p class="text-white mt-4" style="font-size: 0.85em;">( စာအုပ်ဖွင့်ရန် Next ကိုနှိပ်ပါ )</p>
+                </div>
+                <div class="page-face back left-side">
+                  <div class="scrap-title">✨ Sweet Beginnings ✨</div>
+                  <div class="d-flex justify-content-around my-2">
+                    <!-- သင့်ရဲ့ Images/1.jpg ပုံကို ဒီနေရာမှာ ထည့်သွင်းထားပါတယ် -->
+                    <div class="polaroid" style="transform: rotate(-3deg);"><img src="Images/1.jpg" alt="Our Memory">
+                    </div>
+                    <div class="polaroid" style="transform: rotate(3deg);"><img src="Images/3.jpg">
+                    </div>
+                  </div>
+                  <div class="badge-tag">🎀 Happy Birthday 🎀</div>
+                  <div class="scrap-text">
+                    <!-- မွေးနေ့မှာ ပျော်ရွှင်ပါစေ <br>မမရေ... <br> -->
+                    " ပျော်ရွှင်စရာ မွေးနေ့လေး ဖြစ်ပါစေနော် မမ။ မမ လိုချင်တဲ့ အိပ်မက်တွေ၊ ရည်မှန်းချက် တွေ အားလုံး
+                    တစ်ခုချင်း ပြည့်ဝပါစေလို့ ဆုတောင်း ပေးပါတယ်။ ဒီထက်မက ပိုပြီး လှပပျော်ရွှင်ရတဲ့ နှစ်သစ်လေး
+                    ဖြစ်ပါစေ...❤️"
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- SHEET 2 -->
+              <div class="sheet" id="sheet2">
+                <div class="page-face">
+                  <div class="scrap-title">💖My Favorite Person💖</div>
+                  <div class="heart-grid">
+                    <img class="grid-img" src="Images/4.jpg">
+
+
+                  </div>
+                  <div class="scrap-text">
+
+                    " မောင်ရဲ့ နေ့ရက်တွေထဲကို ဝင်ရောက်လာပြီး အဓိပ္ပာယ်တွေ၊ အပြုံးတွေနဲ့ ဖြည့်ဆည်းပေးတဲ့ အတွက်
+                    ကျေးဇူးအများကြီး တင်ပါတယ်။ မမနဲ့အတူ ဖြတ်သန်းရတဲ့ အချိန်တိုင်းက မောင်အတွက် အဖိုးတန်ဆုံးနဲ့
+                    အပျော်ရွှင်ရဆုံး အချိန်တွေပါ။ <br>
+                    မမရဲ့ ရည်မှန်းချက်တွေ၊ အိပ်မက်တွေအားလုံး အကောင်အထည် ပေါ်လာဖို့ မောင်က အနားမှာ အမြဲအားပေး
+                    ကူညီနေမှာပါ။ မမရဲ့ မျက်နှာပေါ်က အပြုံးတွေက ဘယ်တော့မှ မမှေးမှိန်သွားဘဲ တစ်နေ့ထက်တစ်နေ့ ပိုပြီး
+                    လှပတောက်ပနေပါစေလို့ ဆုတောင်းပေးပါတယ် "
+                  </div>
+                </div>
+                <div class="page-face back left-side">
+                  <div class="scrap-title">🌸 Wishing You The Best 🌸</div>
+                  <div class="scrap-text">
+                    "
+                    မွေးနေ့မှာ ဆုတောင်းပေးချင်တာကတော့ မမရဲ့ ရင်ထဲမှာရှိတဲ့ အိပ်မက်တွေ၊ မျှော်လင့်ချက်တွေ အားလုံး
+                    အမှန်တကယ် ဖြစ်လာပါစေ။ ကျန်းမာရေးလည်း ကောင်းမွန်ပြီး စိတ်နှလုံး အမြဲအေးချမ်းသာယာပါစေလို့
+                    ဆုတောင်းပေးပါတယ်။
+
+                    ဘဝရဲ့ ခရီးလမ်းမှာ ကြုံရမယ့် အခက်အခဲမှန်သမျှကို ကျော်ဖြတ်နိုင်တဲ့ ခွန်အားတွေ ပိုင်ဆိုင်နိုင်ပါစေ၊
+                    ပြီးတော့ မမရဲ့ မျက်ဝန်းတွေထဲမှာ အမြဲတမ်း ပျော်ရွှင်မှုတွေ တောက်ပနေပါစေ။ "
+
+                    
+                  </div>
+                  <div class="text-center mt-4">
+                    <div class="polaroid" style="transform: rotate(-2deg);"><img src="Images/2.jpg"
+                        style="width: 100px; height: 80px;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SHEET 3 -->
+              <div class="sheet" id="sheet3">
+                <div class="page-face">
+                  <div class="scrap-title">✨ Forever & Always ✨</div>
+                  <div class="scrap-text">
+                    နောင်လာမယ့် မွေးနေ့များစွာမှာလည်း မမရဲ့ဘေးနားမှာ အမြဲတမ်း ရှိနေပေးချင်ပါတယ်။<br><br>
+                    အများကြီး ချစ်ပါတယ်နော်! 💖❤️
+                  </div>
+                  <div class="badge-tag text-white" style="background: linear-gradient(135deg, #ff758f, #ff4d6d);">MAY
+                    ALL YOUR DREAMS COME TRUE</div>
+                </div>
+                <div class="page-face back left-side d-flex flex-column justify-content-center align-items-center"
+                  style="background: linear-gradient(135deg, #fbb1bd, #ff85a1); border: 4px solid #fff;">
+                  <div style="font-size: 2.8em; margin-bottom: 10px;">💖</div>
+                  <div class="scrap-title text-white" style="font-size: 2.1em;">THE END</div>
+                  <div class="badge-tag bg-white text-danger mt-3">Love You Always ✨</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <button class="btn nav-btn" id="prevBtn" onclick="prevSheet()" disabled>◀ Prev</button>
+        <span class="page-indicator" id="pageIndicator">Cover Page</span>
+        <button class="btn nav-btn" id="nextBtn" onclick="nextSheet()">Next ▶</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Floating Hearts Animation
+    const heartBg = document.getElementById('heartBg');
+    const heartIcons = ['❤️', '💖', '💕', '💗', '🌸', '✨'];
+    for (let i = 0; i < 25; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'floating-heart';
+      heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+      heart.style.setProperty('--left', Math.random() * 100 + '%');
+      heart.style.setProperty('--size', (Math.random() * 1.2 + 0.8) + 'rem');
+      heart.style.setProperty('--duration', (Math.random() * 5 + 4) + 's');
+      heart.style.setProperty('--delay', (Math.random() * 5) + 's');
+      heartBg.appendChild(heart);
+    }
+
+    // Step Switcher Function
+    function goToStep2() {
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+      updateBookState();
+    }
+
+    // Book Navigation Logic
+    let currentSheet = 0;
+    const totalSheets = 3;
+
+    function updateBookState() {
+      const book = document.getElementById('bookWrapper');
+
+      book.classList.remove('open', 'closed-back');
+
+      if (currentSheet > 0 && currentSheet < totalSheets) {
+        book.classList.add('open');
+      } else if (currentSheet === totalSheets) {
+        book.classList.add('closed-back');
+      }
+
+      updateControls();
+    }
+
+    function updateControls() {
+      document.getElementById('prevBtn').disabled = (currentSheet === 0);
+      document.getElementById('nextBtn').disabled = (currentSheet === totalSheets);
+
+      if (currentSheet === 0) {
+        document.getElementById('pageIndicator').innerText = "Cover Page";
+      } else if (currentSheet === totalSheets) {
+        document.getElementById('pageIndicator').innerText = "Back Cover";
+      } else {
+        document.getElementById('pageIndicator').innerText = `Sheet ${currentSheet} of ${totalSheets}`;
+      }
+    }
+
+    function nextSheet() {
+      if (currentSheet < totalSheets) {
+        currentSheet++;
+        document.getElementById(`sheet${currentSheet}`).classList.add('flipped');
+        updateBookState();
+      }
+    }
+
+    function prevSheet() {
+      if (currentSheet > 0) {
+        document.getElementById(`sheet${currentSheet}`).classList.remove('flipped');
+        currentSheet--;
+        updateBookState();
+      }
+    }
+  </script>
+
+</body>
+
+</html>

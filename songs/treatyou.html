@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treat You Better</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #38bdf8;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #terminal {
+      background: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid #30363d;
+      width: 80%;
+      max-width: 600px;
+    }
+    #lyrics-box {
+      font-size: 18px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      border-right: 3px solid #38bdf8;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="terminal">
+  <div id="lyrics-box"></div>
+</div>
+
+<script>
+  const lines = [
+    // { text: "I won't lie to you", speed: 70, pause: 800 },
+    // { text: "I know he's just not right for you", speed: 65, pause: 1000 },
+    // { text: "And you can tell me if I'm off", speed: 70, pause: 600 },
+    // { text: "But I see it on your face", speed: 65, pause: 600 },
+    // { text: "When you say that he's the one that you want", speed: 55, pause: 900 },
+    // { text: "And you're spending all your time", speed: 60, pause: 600 },
+    // { text: "In this wrong situation", speed: 65, pause: 800 },
+    // { text: "And anytime you want it to stop", speed: 60, pause: 1200 },
+    { text: "I know I can treat you better than he can", speed: 70, pause: 800 },
+    { text: "And any girl like you deserves a gentleman", speed: 55, pause: 900 },
+    { text: "Tell me why are we wasting time", speed: 60, pause: 600 },
+    { text: "On all your wasted crying", speed: 60, pause: 700 },
+    { text: "When you should be with me instead", speed: 55, pause: 1000 },
+    { text: "I know I can treat you better", speed: 60, pause: 400 },
+    { text: "Better than he can", speed: 60, pause: 1500 }
+  ];
+
+  const box = document.getElementById("lyrics-box");
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  function typeWriter() {
+    if (lineIndex < lines.length) {
+      const currentLine = lines[lineIndex];
+      if (charIndex < currentLine.text.length) {
+        box.innerHTML += currentLine.text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, currentLine.speed);
+      } else {
+        box.innerHTML += "\n";
+        charIndex = 0;
+        lineIndex++;
+        setTimeout(typeWriter, currentLine.pause);
+      }
+    }
+  }
+
+  typeWriter();
+</script>
+
+</body>
+</html>
